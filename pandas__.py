@@ -13,9 +13,10 @@ states = pd.DataFrame({'population': population, 'area': area, 'capitals': capit
 # print(states)
 # print(states.columns)
 # print(states.index)
-print(states.area['Texas'])
-
-matrix = np.random.rand(3, 2)
-pandas_matrix = pd.DataFrame(matrix, columns=['foo', 'bar'], index=['a', 'b', 'c'])
-print(matrix)
-print(pandas_matrix)
+# print(states.area['Texas'])
+#
+# matrix = np.random.rand(3, 2)
+# pandas_matrix = pd.DataFrame(matrix, columns=['foo', 'bar'], index=['a', 'b', 'c'])
+# print(matrix)
+# print(pandas_matrix)
+print(states)

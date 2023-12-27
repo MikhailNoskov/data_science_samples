@@ -10,7 +10,7 @@ from sklearn.decomposition import PCA
 # Iris sample
 #
 iris = sns.load_dataset('iris')
-print(iris.head())
+# print(iris.head())
 # # sns.pairplot(iris, hue='species', height=1.5)
 # # plt.show()
 X_iris = iris.drop('species', axis=1)
@@ -37,6 +37,9 @@ y_iris = iris['species']
 # plt.scatter(x, y)
 # plt.scatter(xfit, yfit, cmap='Red')
 # plt.plot(xfit, yfit)
+
+# Supervised Learning Example: Iris Classication
+
 # Xtrain, Xtest, ytrain, ytest = train_test_split(X_iris, y_iris, random_state=1)
 # model = GaussianNB()  # 2. instantiate model
 # model.fit(Xtrain, ytrain)  # 3. fit model to data
@@ -53,10 +56,10 @@ X_2D = model.transform(X_iris)  # 4. transform the data
 iris['PCA1'] = X_2D[:, 0]
 iris['PCA2'] = X_2D[:, 1]
 
-sns.lmplot(x="PCA1", y="PCA2", hue='species', data=iris, fit_reg=False)
-
-# Unsupervised Learning Example: Iris Clustering
-
+# sns.lmplot(x="PCA1", y="PCA2", hue='species', data=iris, fit_reg=False)
+#
+# # Unsupervised Learning Example: Iris Clustering
+#
 from sklearn.mixture import GaussianMixture
 
 model = GaussianMixture(n_components=3, covariance_type='full')  # 2. instantiate model
